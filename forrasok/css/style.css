@@ -1,11 +1,14 @@
 body { 
-	color: White; 
+	color: White;
+	max-width: 1000px;
+	margin: auto;
 }
 header { 
 	margin: 3px auto; 
 	box-shadow: 1px 1px 3px Black;
 	text-shadow: 1px 1px 1px Black; 
-	position: relative; 
+	position: relative;
+	width: 100%;
 }
 header::before {    
 	content: "";
@@ -18,6 +21,17 @@ header::before {
 	left: 0px;
 	opacity: 0.4; 
 }
+
+h1,
+h2,
+h3 {
+	font-variant: small-caps;
+}
+
+h2 {
+	margin-top: 20px;
+}
+
 header div.header {
 	position: relative;
 	color: White; 
@@ -26,7 +40,9 @@ nav {
 	position: sticky;
 	top: 0;
 	z-index: 100; 
-	box-shadow: 1px 1px 3px Black; 
+	box-shadow: 1px 1px 3px Black;
+	text-decoration: none;
+	color: gray;
 }
 nav a.nav-link {
 	color: White; 
@@ -42,6 +58,12 @@ h4 {
 	font-family: Georgia;
 	font-style: italic; 
 }
+
+section {
+	margin-top: 50px;
+	margin: 10px;
+}
+
 section.text-bg-light h2 { 
 	border-bottom: 1px solid Gray;
 }
@@ -72,6 +94,7 @@ a img {
 }
 .up {
 	font-size: 150%;
+	text-align: center;
 }
 
 
@@ -86,5 +109,11 @@ a img {
 		float: right;
 		margin-left: 15px;
 		margin-top: 10px; }
+}
+
+@media screen and (min-width: 576px) {
+	.info {
+		display: none;
+	}
 }
 
